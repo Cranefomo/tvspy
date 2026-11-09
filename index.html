@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Is your TV watching you? Turn it off in 2 minutes</title>
+<meta name="description" content="Your smart TV recognizes everything on your screen, even your PlayStation and cable box. Step-by-step: turn off ACR tracking and targeted ads on Samsung, LG and Roku TVs. No hacking, just your remote.">
+<meta property="og:title" content="Is your TV watching you?">
+<meta property="og:description" content="Samsung, LG, Xiaomi, Sony, TCL, Roku, Fire TV and more. 2 minutes, just your remote.">
+<style>
+:root{--bg:#0b0d10;--card:#14171c;--line:#252a32;--txt:#e8eaed;--mut:#8b929c;--acc:#ff4d4d;--ok:#3ddc84;--chip:#1d2229}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:720px;margin:0 auto;padding:28px 18px 60px}
+h1{font-size:34px;line-height:1.15;margin:8px 0 10px;letter-spacing:-.5px}
+h1 .eye{color:var(--acc)}
+.lead{color:var(--mut);margin:0 0 22px;font-size:17px}
+.lead b{color:var(--txt)}
+.badge{display:inline-block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);border:1px solid #4a1f1f;background:#1f1214;padding:4px 10px;border-radius:99px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}
+.label{font-size:13px;color:var(--mut);margin:0 0 8px;text-transform:uppercase;letter-spacing:.06em}
+.brands{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.brands small{display:block;font-size:11px;font-weight:500;opacity:.7;margin-top:2px}
+.brands button,.years button{background:var(--chip);color:var(--txt);border:1px solid var(--line);border-radius:10px;padding:12px 8px;font-size:16px;font-weight:600;cursor:pointer}
+.brands button[aria-pressed=true],.years button[aria-pressed=true]{background:#fff;color:#000;border-color:#fff}
+.years{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.years button{padding:9px 12px;font-size:14px;font-weight:500}
+.hint{font-size:13px;color:var(--mut);margin:10px 0 0}
+.progress{display:flex;align-items:center;gap:12px;margin:4px 0 14px}
+.bar{flex:1;height:8px;background:var(--chip);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--ok);transition:width .3s}
+.count{font-size:14px;color:var(--mut);min-width:84px;text-align:right}
+.step{display:flex;gap:12px;padding:14px 0;border-top:1px solid var(--line)}
+.step:first-of-type{border-top:0}
+.step input{appearance:none;-webkit-appearance:none;flex:none;width:26px;height:26px;margin:2px 0 0;border:2px solid #4a515c;border-radius:8px;cursor:pointer;position:relative}
+.step input:checked{background:var(--ok);border-color:var(--ok)}
+.step input:checked::after{content:"";position:absolute;left:7px;top:2px;width:7px;height:13px;border:solid #000;border-width:0 3px 3px 0;transform:rotate(45deg)}
+.step.done h3{color:var(--mut);text-decoration:line-through}
+.step h3{margin:0 0 4px;font-size:17px}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.05em;padding:2px 7px;border-radius:6px;margin-left:6px;vertical-align:2px}
+.tag.must{background:#3a1416;color:#ff8a8a}
+.tag.opt{background:#1d2a22;color:#8fe0aa}
+.path{display:flex;flex-wrap:wrap;align-items:center;gap:4px;margin:6px 0}
+.path span{background:var(--chip);border:1px solid var(--line);border-radius:6px;padding:2px 8px;font-size:14px}
+.path em{color:var(--mut);font-style:normal;font-size:13px}
+.path span.end{background:#fff;color:#000;border-color:#fff;font-weight:600}
+.why{color:var(--mut);font-size:14px;margin:4px 0 0}
+.alt{color:var(--mut);font-size:13px;margin:6px 0 0}
+.alt b{color:#c9cdd3;font-weight:600}
+.donebox{display:none;text-align:center;padding:10px 0 2px}
+.donebox.show{display:block}
+.donebox p{margin:4px 0}
+.donebox .big{font-size:22px;font-weight:700;color:var(--ok)}
+details{border-top:1px solid var(--line);padding:12px 0}
+details:first-of-type{border-top:0}
+summary{cursor:pointer;font-weight:600}
+details p,details li{color:var(--mut);font-size:15px}
+.btn{display:inline-block;background:#fff;color:#000;text-decoration:none;font-weight:700;padding:11px 18px;border-radius:99px;border:0;font-size:15px;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
+.row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px}
+.src a{color:#9ab4ff}
+.src li{font-size:14px;color:var(--mut);margin:3px 0}
+footer{text-align:center;color:var(--mut);font-size:13px;margin-top:30px}
+footer a{color:var(--txt)}
+@media(max-width:640px){.brands{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){h1{font-size:28px}.brands button{font-size:15px;padding:12px 6px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="badge">Smart TV privacy</span>
+  <h1>Your TV knows what you're watching. <span class="eye">Even from HDMI.</span></h1>
+  <p class="lead">Most smart TVs run <b>ACR</b> (automatic content recognition): they keep matching what's on your screen against a database, including your cable box, game console and laptop, and use it for ads. Here's how to switch it off. <b>2 minutes, just your remote.</b> No hacking, nothing can break.</p>
+
+  <div class="card">
+    <p class="label">1. Pick your TV</p>
+    <div class="brands" role="group" aria-label="TV brand">
+      <button data-brand="samsung" aria-pressed="false">Samsung</button>
+      <button data-brand="lg" aria-pressed="false">LG</button>
+      <button data-brand="xiaomi" aria-pressed="false">Xiaomi</button>
+      <button data-brand="sony" aria-pressed="false">Sony</button>
+      <button data-brand="googletv" aria-pressed="false">TCL · Philips · Hisense<small>Google TV / Android TV</small></button>
+      <button data-brand="roku" aria-pressed="false">Roku TV<small>TCL, Hisense, Roku</small></button>
+      <button data-brand="firetv" aria-pressed="false">Fire TV</button>
+      <button data-brand="vizio" aria-pressed="false">Vizio</button>
+      <button data-brand="vidaa" aria-pressed="false">Hisense<small>VIDAA</small></button>
+      <button data-brand="apple" aria-pressed="false">Apple TV</button>
+    </div>
+    <div id="yearBox" hidden>
+      <div class="years" id="years" role="group" aria-label="TV year"></div>
+      <p class="hint" id="yearHint"></p>
+    </div>
+    <p class="hint">Brand not listed? Most TVs run one of these systems: Google TV / Android TV, Roku, Fire TV or VIDAA. The logo on the home screen tells you which.</p>
+  </div>
+
+  <div class="card" id="stepsCard" hidden>
+    <p class="label">2. Turn these off</p>
+    <div class="progress"><div class="bar"><i id="barFill"></i></div><span class="count" id="count">0 / 0</span></div>
+    <div id="steps"></div>
+    <div class="donebox" id="donebox">
+      <p class="big">Done. Your TV stopped watching back.</p>
+      <p class="hint">Re-check after big firmware updates, some TVs ask for consent again.</p>
+      <div class="row">
+        <a class="btn" id="shareX" target="_blank" rel="noopener">Share on X</a>
+        <button class="btn ghost" id="copyLink">Copy link for parents</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <p class="label">Good to know</p>
+    <details><summary>Will anything stop working?</summary><p>No. Apps, streaming, HDMI, voice remote (unless you turn voice off) all keep working. You lose "personalized" recommendations and some interactive extras. On Roku, "More Ways to Watch" suggestions go away.</p></details>
+    <details><summary>Will I still see ads?</summary><p>Yes, some. Ad rows on the home screen are part of the platform. These steps stop the TV from <b>tracking what you watch</b> and from <b>targeting</b> ads at you. On LG you can also hide home screen promotions.</p></details>
+    <details><summary>Does it delete what was already collected?</summary><p>No. Roku, for example, says data collected while the setting was on is kept. Turning it off stops new collection from now on.</p></details>
+    <details><summary>I can't find the setting</summary><p>Menu names change by year, region and firmware. ACR may be called <b>Viewing Information Services</b> (Samsung, Hisense), <b>Live Plus</b> (LG), <b>Samba Interactive TV</b> (Sony), <b>Smart TV Experience</b> (Roku), <b>Viewing Data</b> (Vizio). In some regions it's off by default, so the option may be missing. Check the alternative path under each step.</p></details>
+    <details><summary>Why trust this page?</summary><p>It runs entirely in your browser, has no tracking and collects nothing. Steps come from Google, Apple, Sony, LG, Roku and Xiaomi support docs, TV manuals and published reporting (sources below). Where a maker publishes no path, the page says to check the alternative. Code is open on GitHub.</p></details>
+  </div>
+
+  <div class="card src">
+    <p class="label">Sources</p>
+    <ul>
+      <li><a href="https://themarkup.org/privacy/2023/12/12/your-smart-tv-knows-what-youre-watching" target="_blank" rel="noopener">The Markup: Your smart TV knows what you're watching</a></li>
+      <li><a href="https://support.roku.com/article/115005739288" target="_blank" rel="noopener">Roku support: Smart TV Experience</a></li>
+      <li><a href="https://www.lg.com/us/support/help-library/how-to-turn-quick-start-on-or-off-on-your-lg-tv--20155512833565" target="_blank" rel="noopener">LG support: settings menu by webOS year</a></li>
+      <li><a href="https://support.google.com/googletv/answer/13392198" target="_blank" rel="noopener">Google TV help: advertising ID</a></li>
+      <li><a href="https://support.google.com/googletv/answer/10070784" target="_blank" rel="noopener">Google TV help: Apps only mode</a></li>
+      <li><a href="https://www.sony.com.au/electronics/support/articles/00203482" target="_blank" rel="noopener">Sony support: Samba Interactive TV</a></li>
+      <li><a href="https://support.apple.com/guide/tv/atvb66239fa1/tvos" target="_blank" rel="noopener">Apple support: privacy settings on Apple TV</a></li>
+      <li><a href="https://thenai.org/opt-out/connected-tv-choices/" target="_blank" rel="noopener">NAI: ad settings on TVs and streaming devices</a></li>
+      <li><a href="https://www.consumerreports.org/electronics/privacy/how-to-turn-off-smart-tv-snooping-features-a4840102036/" target="_blank" rel="noopener">Consumer Reports: turn off smart TV snooping</a></li>
+      <li><a href="https://www.tomsguide.com/tvs/your-tv-is-watching-you-how-to-turn-off-data-collection-on-lg-samsung-roku-and-more" target="_blank" rel="noopener">Tom's Guide: turn off data collection on LG, Samsung, Roku</a></li>
+      <li><a href="https://www.malwarebytes.com/blog/news/2026/03/samsung-tvs-stop-spying-on-viewers-in-texas-heres-how-to-disable-acr-anywhere" target="_blank" rel="noopener">Malwarebytes: how to disable ACR anywhere</a></li>
+    </ul>
+  </div>
+
+  <footer>
+    <div class="row"><a class="btn ghost" href="https://x.com/intent/follow?screen_name=Cranefomo" target="_blank" rel="noopener">Follow @Cranefomo</a></div>
+    <p>Made by <a href="https://x.com/Cranefomo" target="_blank" rel="noopener">@Cranefomo</a> · <a href="https://github.com/Cranefomo/tvspy" target="_blank" rel="noopener">source</a> · not affiliated with any TV maker</p>
+  </footer>
+</div>
+
+<script>
+const G = (...p) => p;
+const GTV_HINT = "Google TV has a For you / Apps tabs bar at the top of the home screen. Older Android TV shows rows of apps and channels. Not sure? Try Google TV first.";
+function googleSteps(v, brand){
+  const gtv = v==="gtv";
+  const agreeName = brand==="xiaomi" ? "Xiaomi" : brand==="sony" ? "Sony / BRAVIA" : "TV maker";
+  const s = [];
+  s.push(gtv
+    ? {t:"Delete advertising ID", must:1, p:G("Settings","Privacy","Ads","Delete advertising ID"), end:"Confirm", w:"Apps can no longer use an ad ID to profile you. Ads stay, they just aren't tied to your viewing.", a:"Can't select it? Press the D-pad twice to focus the button, then Select."}
+    : {t:"Opt out of Ads Personalization", must:1, p:G("Settings","Device Preferences","About","Legal information","Ads","Opt out of Ads Personalization"), end:"On", w:"Turn this ON. Stops apps using your ad ID for targeted ads.", a:"<b>Or:</b> Settings > About > Legal information > Ads (the path depends on the TV maker)."});
+  s.push(gtv
+    ? {t:"Usage & diagnostics", must:1, p:G("Settings","Privacy","Usage & diagnostics"), end:"Off", w:"Stops the TV sending usage and crash data to Google."}
+    : {t:"Usage & diagnostics", must:1, p:G("Settings","Device Preferences","Usage & Diagnostics"), end:"Off", w:"Stops the TV sending usage and crash data to Google."});
+  if (brand==="xiaomi") s.push({t:"Skip PatchWall ads", p:G("Settings","Device Preferences","PatchWall","Set PatchWall as default launcher"), end:"Off", w:"PatchWall is Xiaomi's own home screen and it carries its own sponsored rows. With this off, the Home button opens the plain Google home.", a:"Not every Mi TV has this switch. If yours doesn't, use the Home button instead of the PatchWall button on the remote."});
+  if (brand==="sony") s.push({t:"Samba Interactive TV", must:1, p:G("Settings","System Preferences","Samba Interactive TV"), end:"Disable", w:"This is the ACR on many Sony TVs, run by a third party (Samba TV). It recognizes what's on screen, including HDMI.", a:"Not in the list? Your model doesn't have it, skip this step. Sony's support pages confirm the System Preferences path."});
+  s.push({t:agreeName+" agreements", must: brand==="other"?1:0, p:G("Settings","Privacy"), end:"Review", w:"Most brands add their own agreements on top of Google's. Look for <b>Viewing Information</b>, <b>Smart TV Experience</b>, <b>User Experience Program</b> or <b>Interest-based ads</b> and turn them off. On Hisense Google TVs, Viewing Information Services is the ACR.", a:"<b>Or look in:</b> Settings > System > Privacy, or Settings > Device Preferences > About > Legal."});
+  if (gtv) s.push({t:"Apps only mode", p:G("Settings","Accounts & Sign In","your profile","Apps only mode"), end:"On", w:"Removes the recommendation and promo rows from the home screen. Trade-off: no Google search and no Assistant on the TV."});
+  s.push({t:"Location", p: gtv ? G("Settings","Privacy","Location") : G("Settings","Device Preferences","Location"), end:"Off", w:"The TV doesn't need your location for streaming. Some local news or weather apps may ask again."});
+  return s;
+}
+const GVARS = [{id:"gtv", label:"Google TV"},{id:"atv", label:"Android TV (older)"}];
+const DATA = {
+  samsung: { name:"Samsung",
+    years: [{id:"2024", label:"2024 and newer"},{id:"2018", label:"2018 to 2023"},{id:"old", label:"2017 and older"}],
+    hint: "Year is on the sticker on the back, or Settings > Support > About This TV. Not sure? Start with 2024 and newer.",
+    steps: y => {
+      const base = y==="2024" ? G("Settings","All Settings","General & Privacy","Terms & Privacy","Privacy Choices")
+                 : y==="2018" ? G("Settings","Support","Terms & Policies")
+                 : G("Settings","Support","Terms & Policy");
+      const alt = y==="2024" ? "<b>Or:</b> Home button, go left to the sidebar, open <b>Privacy Choices</b>. On some sets it's Settings > Support > Terms & Privacy."
+                : y==="2018" ? "<b>Or:</b> Settings > General & Privacy > Terms & Privacy, or the <b>Privacy Choices</b> item in the left sidebar."
+                : "On these models everything sits under <b>SyncPlus and Marketing</b>.";
+      if (y==="old") return [
+        {t:"SyncPlus and Marketing", must:1, p:[...base,"SyncPlus and Marketing"], end:"Off", w:"This is the old name for Samsung's viewing tracking and ad targeting.", a:alt},
+        {t:"Voice Recognition Services", p:[...base,"Voice Recognition Services"], end:"Off", w:"Only if you don't use voice commands."}
+      ];
+      return [
+        {t:"Viewing Information Services", must:1, p:[...base,"Viewing Information Services"], end:"Off", w:"This is Samsung's ACR. It recognizes what's on screen from any source, including HDMI.", a:alt},
+        {t:"Interest-Based Advertising", must:1, p:[...base,"Interest-Based Advertising"], end:"Off", w:"Stops Samsung using your viewing profile to target ads. Ads stay, they just aren't based on you."},
+        {t:"Voice Recognition Services", p:[...base,"Voice Recognition Services"], end:"Off", w:"Only if you don't use voice commands. Stops voice data going to Samsung."}
+      ];
+    }
+  },
+  lg: { name:"LG",
+    years: [{id:"2026", label:"2026 and newer"},{id:"2021", label:"2021 to 2025"},{id:"2020", label:"2020"},{id:"old", label:"2019 and older"}],
+    hint: "Year: Settings > All Settings > Support > About This TV shows the webOS version (webOS 6 = 2021, 22 = 2022, 23 = 2023 and so on).",
+    steps: y => {
+      const add = y==="2026" ? G("Settings","All Settings","System","Additional Settings")
+                : y==="2021" ? G("Settings","All Settings","General","System","Additional Settings")
+                : y==="2020" ? G("Settings","All Settings","General","Additional Settings")
+                : G("Settings","All Settings","General");
+      const ua = (y==="2026"||y==="2021") ? G("Settings","All Settings","Support","Privacy & Terms","User Agreements")
+                                          : G("Settings","All Settings","General","About This TV","User Agreements");
+      return [
+        {t:"Live Plus", must:1, p:[...add,"Live Plus"], end:"Off", w:"This is LG's ACR. It recognizes what's playing, including from HDMI devices.", a: y==="old" ? "<b>Or:</b> General > Additional Settings > Live Plus. Some older models don't have it." : "Some European models call it <b>Interactive TV Service</b>."},
+        {t:"Limit Ad Tracking", must:1, p:[...add,"Advertisement","Limit AD Tracking"], end:"On", w:"Turn this ON. It stops ads being personalized from your viewing.", a:"Missing? Look for <b>Advertisement</b> in the same Additional Settings list."},
+        {t:"User Agreements", must:1, p:ua, end:"Uncheck", w:"Uncheck <b>Viewing Information</b>, <b>Interest-Based Advertising</b> and <b>Voice Information</b> (keep the main Terms of Use, it's required for apps).", a: (y==="2026"||y==="2021") ? "<b>Older menu:</b> General > About This TV > User Agreements." : "<b>Newer menu:</b> Support > Privacy & Terms > User Agreements."},
+        {t:"Home screen promotions", p:[...add,"Home Settings"], end:"Off", w:"Turn off <b>Home Promotion</b> and <b>Content Recommendation</b>. Fewer banner ads on the home screen.", a:"If you don't see Home Settings here, check General > Home Settings."},
+        {t:"Do Not Sell My Info (US)", p:G("Settings","All Settings","Support","Privacy & Terms"), end:"On", w:"US models only. Stops LG selling or sharing your data with third parties."}
+      ];
+    }
+  },
+  xiaomi: { name:"Xiaomi", years: GVARS, hint: "Newer Xiaomi TV A / A Pro / Mi TV Stick 4K run Google TV. Older Mi TV 4A, P1, Q1 and Mi Box run Android TV. "+GTV_HINT, steps: v => googleSteps(v,"xiaomi") },
+  sony: { name:"Sony", years: GVARS, hint: "BRAVIA from 2021 on are mostly Google TV, older ones Android TV. "+GTV_HINT, steps: v => googleSteps(v,"sony") },
+  googletv: { name:"Google TV", years: GVARS, hint: "TCL, Philips, Hisense, Sharp, Chromecast and other Google TV / Android TV sets. "+GTV_HINT, steps: v => googleSteps(v,"other") },
+  roku: { name:"Roku", years: null,
+    steps: () => [
+      {t:"Use info from TV inputs", must:1, p:G("Home","Settings","Privacy","Smart TV Experience","Use info from TV inputs"), end:"Uncheck", w:"This is Roku's ACR. It watches what comes in through the antenna and HDMI (cable box, console). Roku TVs only (TCL, Hisense, Roku), not streaming sticks.", a:"Some firmware labels it <b>Automatic Content Recognition (ACR)</b>."},
+      {t:"Limit ad tracking", must:1, p:G("Home","Settings","Privacy","Advertising"), end:"Limit", w:"Check <b>Limit ad tracking</b> (newer firmware: turn <b>Personalize ads</b> off). Works on every Roku, sticks too.", a:"While you're there: <b>Reset advertising identifier</b> wipes the current ad ID."},
+      {t:"Microphone access", p:G("Home","Settings","Privacy","Microphone"), end:"Never allow", w:"Set <b>Channel microphone access</b> to Never allow, unless an app really needs your mic."},
+      {t:"Privacy Choices (US)", p:G("Home","Settings","Privacy","Privacy Choices"), end:"On", w:"US only. Turn on <b>Do not sell or share my personal information</b>."}
+    ]
+  },
+  firetv: { name:"Fire TV", years: null,
+    steps: () => [
+      {t:"Device Usage Data", must:1, p:G("Settings","Preferences","Privacy Settings","Device Usage Data"), end:"Off", w:"Stops Amazon using how you use the device for marketing.", a:"Older Fire TVs: Settings > Applications instead of Preferences."},
+      {t:"Collect App and Over-the-Air Usage", must:1, p:G("Settings","Preferences","Privacy Settings","Collect App and Over-the-Air Usage"), end:"Off", w:"Stops tracking of which apps you use, for how long, and what you watch on antenna TV."},
+      {t:"Interest-based Ads", must:1, p:G("Settings","Preferences","Privacy Settings","Interest-based Ads"), end:"Off", w:"Stops your ad ID being used for targeted ads. Ads in the interface stay."},
+      {t:"Automatic Content Recognition", p:G("Settings","Preferences","Privacy Settings","Automatic Content Recognition"), end:"Off", w:"Only on Fire TV smart TVs (Amazon Omni, Toshiba, Insignia, Hisense Fire TV). Sticks don't have it."}
+    ]
+  },
+  vizio: { name:"Vizio", years: null,
+    steps: () => [
+      {t:"Viewing Data", must:1, p:G("Settings","Admin & Privacy","Viewing Data"), end:"Off", w:"This is Vizio's ACR. It recognizes everything on screen, including HDMI.", a:"<b>Newer sets:</b> Settings > Privacy & Legal > Viewing Data. <b>Older:</b> Menu > System > Reset & Admin > Viewing Data."},
+      {t:"Advertising", must:1, p:G("Settings","Admin & Privacy","Advertising"), end:"Off", w:"Turn off personalized ads. Vizio can still target ads with Viewing Data off, so do both.", a:"Newer sets: Settings > Privacy & Legal."}
+    ]
+  },
+  vidaa: { name:"Hisense VIDAA", years: null,
+    steps: () => [
+      {t:"Viewing Information Services", must:1, p:G("Settings","System","Privacy"), end:"Off", w:"Hisense's ACR. Turn off <b>Viewing Information Services</b> / <b>Smart TV Experience</b> and <b>Enhanced Viewing</b> if listed.", a:"Menus differ a lot between VIDAA versions. Also check Settings > Support > Privacy. Hisense with Google TV or Roku: pick those buttons instead."},
+      {t:"Interactive / personalized ads", must:1, p:G("Settings","System","Privacy"), end:"Off", w:"Turn off <b>Interactive Advertising</b> or personalized ads in the same menu."},
+      {t:"Microphone", p:G("TV","mic switch"), end:"Off", w:"Hisense TVs with a built-in mic have a physical switch near the Hisense logo. Flip it if you don't use voice."}
+    ]
+  },
+  apple: { name:"Apple TV", years: null,
+    steps: () => [
+      {t:"Apps asking to track", must:1, p:G("Settings","General","Privacy & Security","Tracking","Allow Apps to Ask to Track"), end:"Off", w:"Apple TV has no ACR, the main leak is apps. This stops them asking to use your ad ID.", a:"tvOS 17 and older: Settings > General > Privacy > Tracking."},
+      {t:"Share Apple TV Analytics", p:G("Settings","General","Privacy & Security","Share Apple TV Analytics"), end:"Off", w:"Also turn off <b>Share with App Developers</b> and <b>Improve Siri & Dictation</b> in the same section."},
+      {t:"Use Play History", p:G("Settings","Apps","TV","Use Play History"), end:"Off", w:"Stops your watching feeding recommendations in the TV app."}
+    ]
+  }
+};
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let state = {brand:null, year:null};
+
+function store(k, v){ try{ v===undefined ? localStorage.removeItem(k) : localStorage.setItem(k, v); }catch(e){} }
+function load(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } }
+const key = () => "tvspy:" + state.brand + ":" + (state.year||"all");
+
+function pickBrand(b){
+  state.brand = b; state.year = null;
+  document.querySelectorAll('[data-brand]').forEach(x => x.setAttribute('aria-pressed', x.dataset.brand===b));
+  const d = DATA[b];
+  if (d.years){
+    $('#yearBox').hidden = false;
+    $('#years').innerHTML = d.years.map(y => `<button data-year="${y.id}" aria-pressed="false">${esc(y.label)}</button>`).join('');
+    $('#yearHint').textContent = d.hint;
+    $('#years').querySelectorAll('button').forEach(btn => btn.onclick = () => pickYear(btn.dataset.year));
+    const ly = load('tvspy:year:'+b);
+    pickYear(d.years.some(y=>y.id===ly) ? ly : d.years[0].id);
+  } else {
+    $('#yearBox').hidden = true;
+    render();
+  }
+  store('tvspy:last', b);
+}
+function pickYear(y){
+  state.year = y;
+  store('tvspy:year:'+state.brand, y);
+  $('#years').querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x.dataset.year===y));
+  render();
+}
+function render(){
+  const steps = DATA[state.brand].steps(state.year);
+  let saved = {};
+  try{ saved = JSON.parse(load(key())||"{}") || {}; }catch(e){ saved = {}; }
+  $('#steps').innerHTML = steps.map((s,i) => {
+    const path = s.p.map(x => `<span>${esc(x)}</span>`).join('<em>›</em>') + `<em>›</em><span class="end">${esc(s.end)}</span>`;
+    return `<div class="step${saved[i]?' done':''}">
+      <input type="checkbox" id="s${i}" ${saved[i]?'checked':''} aria-label="Done: ${esc(s.t)}">
+      <div><h3><label for="s${i}">${esc(s.t)}</label><span class="tag ${s.must?'must':'opt'}">${s.must?'MUST':'OPTIONAL'}</span></h3>
+      <div class="path">${path}</div>
+      <p class="why">${s.w}</p>${s.a?`<p class="alt">${s.a}</p>`:''}</div></div>`;
+  }).join('');
+  $('#steps').querySelectorAll('input').forEach((cb,i) => cb.onchange = () => {
+    saved[i] = cb.checked; if(!cb.checked) delete saved[i];
+    cb.closest('.step').classList.toggle('done', cb.checked);
+    store(key(), JSON.stringify(saved)); progress(steps);
+  });
+  $('#stepsCard').hidden = false;
+  progress(steps);
+}
+function progress(steps){
+  const boxes = [...document.querySelectorAll('#steps input')];
+  const done = boxes.filter(b => b.checked).length;
+  const mustIdx = steps.map((s,i)=>s.must?i:-1).filter(i=>i>=0);
+  const mustDone = mustIdx.every(i => boxes[i] && boxes[i].checked);
+  $('#count').textContent = done + " / " + boxes.length;
+  $('#barFill').style.width = (boxes.length ? done/boxes.length*100 : 0) + "%";
+  $('#donebox').classList.toggle('show', mustDone && mustIdx.length>0);
+}
+
+const url = location.href.split('#')[0];
+const brandName = () => DATA[state.brand].name;
+$('#shareX').onclick = () => {
+  const n = brandName(); const t = `Just turned off the settings that let my ${/TV$/.test(n) ? n : n+" TV"} track what I watch. Took 2 minutes:`;
+  $('#shareX').href = "https://x.com/intent/post?text=" + encodeURIComponent(t) + "&url=" + encodeURIComponent(url);
+};
+$('#copyLink').onclick = async () => {
+  try{ await navigator.clipboard.writeText(url); $('#copyLink').textContent = "Copied"; }
+  catch(e){ prompt("Copy this link:", url); }
+  setTimeout(() => $('#copyLink').textContent = "Copy link for parents", 1800);
+};
+document.querySelectorAll('[data-brand]').forEach(b => b.onclick = () => pickBrand(b.dataset.brand));
+
+const fromHash = (location.hash.match(/^#(samsung|lg|xiaomi|sony|googletv|roku|firetv|vizio|vidaa|apple)$/i)||[])[1];
+const last = fromHash ? fromHash.toLowerCase() : load('tvspy:last');
+if (last && DATA[last]) pickBrand(last);
+window.addEventListener('hashchange', () => {
+  const h = (location.hash.match(/^#(samsung|lg|xiaomi|sony|googletv|roku|firetv|vizio|vidaa|apple)$/i)||[])[1];
+  if (h) pickBrand(h.toLowerCase());
+});
+</script>
+</body>
+</html>
