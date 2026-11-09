@@ -148,7 +148,7 @@ function googleSteps(v, brand){
   const s = [];
   s.push(gtv
     ? {t:"Delete advertising ID", must:1, p:G("Settings","Privacy","Ads","Delete advertising ID"), end:"Confirm", w:"Apps can no longer use an ad ID to profile you. Ads stay, they just aren't tied to your viewing.", a:"Can't select it? Press the D-pad twice to focus the button, then Select."}
-    : {t:"Opt out of Ads Personalization", must:1, p:G("Settings","Device Preferences","About","Legal information","Ads","Opt out of Ads Personalization"), end:"On", w:"Turn this ON. Stops apps using your ad ID for targeted ads.", a:"<b>Or:</b> Settings > About > Legal information > Ads (the path depends on the TV maker)."});
+    : {t:"Delete advertising ID", must:1, p:G("Settings","Device Preferences","About","Legal information","Ads","Delete advertising ID"), end:"Confirm", w:"Apps can no longer use an ad ID to profile you. Ads stay, they just aren't tied to your viewing.", a:"<b>Older firmware:</b> the same Ads menu shows <b>Opt out of Ads Personalization</b> instead, turn it ON. On some TVs it's Settings > About > Legal information > Ads."});
   s.push(gtv
     ? {t:"Usage & diagnostics", must:1, p:G("Settings","Privacy","Usage & diagnostics"), end:"Off", w:"Stops the TV sending usage and crash data to Google."}
     : {t:"Usage & diagnostics", must:1, p:G("Settings","Device Preferences","Usage & Diagnostics"), end:"Off", w:"Stops the TV sending usage and crash data to Google."});
